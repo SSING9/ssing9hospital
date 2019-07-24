@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+/* 초기화 */
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {border: 0;}
+button {border: 0; outline: 0;}
+h1, h2, h3, h4, h5, p, a {color: #464646; font-family: 'Noto Sans KR', sans-serif;}
+.hidden {position: absolute; left: -9999px;}
+.clearfix::before, .clearfix::after {display: block; content: ''; clear: both;}
+
+/*
+font-family: 'Noto Sans KR', sans-serif;
+#00cec9;
+#0984e3;
+#74b9ff;
+#ff7675;
+#d63031;
+*/
+
+/* 레이아웃 크기지정 */
+#header, #section, #footer {min-width: 1180px;}
+#mainWrap, .layoutWrap, .footerWrap {margin-left: auto; margin-right: auto; width: 1180px; text-align: center;}
+
+/* 헤더 시작 */
+#heder {border-bottom: 2px solid #0984e3}
+#heder #mainWrap {position: relative;}
+#heder #mainWrap #subNav {position: absolute; right: 10px; top: 10px;}
+#heder #mainWrap #subNav li {float: left; background: url(../images/topline.jpg) right no-repeat;}
+#heder #mainWrap #subNav li.lastList {background: url();}
+#heder #mainWrap #subNav li a {display: block; padding: 10px; font-size: 14px; font-weight: 300;}
+#heder #mainWrap h1 {margin: 40px 0 10px 20px; float: left;}
+#heder #mainWrap #mainNav {display: block; float: right; width: 880px;}
+#heder #mainWrap #mainNav li {position: relative; float: left; margin-top: 60px; width: 20%;}
+#heder #mainWrap #mainNav li a {padding-bottom: 5px; font-size: 22px;}
+#heder #mainWrap #mainNav li:hover > a {border-bottom: 3px solid #0984e3; transition: all 0.2s;}
+#heder #mainWrap #mainNav li .mainSubNav {display: none; position: absolute; left: 0; top: 59px; z-index: 5; background: #fff; 
+                                          border-left: 2px solid #0984e3; border-right: 2px solid #0984e3; border-bottom: 2px solid #0984e3;}
+#heder #mainWrap #mainNav li .mainSubNav li {margin: 0; padding: 10px; width: 100%; }
+#heder #mainWrap #mainNav li .mainSubNav li a {display: block;  padding: 10px; font-size: 17px;}
+#heder #mainWrap #mainNav li .mainSubNav li:hover {background: #0984e3;}
+#heder #mainWrap #mainNav li .mainSubNav li:hover a {border-bottom: 0px solid; color: #fff;}
+
+/* 메인 슬라이드 */
+#section #slide {position: relative; overflow: hidden; width: 100%;}
+#section #slide .slick-prev {position: absolute; top: 50%; left: 5%; z-index: 1; transform: translateY(-50%); width: 194px; height: 233px; background: url(../images/prev.png) no-repeat; text-indent: -9999px;}
+#section #slide .slick-next {position: absolute; top: 50%; right: 5%; transform: translateY(-50%); width: 194px; height: 233px; background: url(../images/next.png) no-repeat; text-indent: -9999px;}
+#section #slide .slick-dots {position: absolute; left: 50%; bottom: 130px; transform: translateX(-50%);}
+#section #slide .slick-dots li {padding: 10px; float: left;}
+#section #slide .slick-dots li button {width: 20px; height: 20px; border-radius: 100%; background: #eee; text-indent: -9999px;}
+#section #slide .slick-dots li.slick-active button {background: #0984e3;}
+
+/* 콘텐츠1 공통 레이아웃 */
+#section #contentBox {position: relative; background: #eee; height: 650px;}
+#section #contentBox #content1 {position: absolute; left: 50%; top: -100px; transform: translateX(-50%);}
+#section #contentBox .tit {padding: 20px; margin-top: 30px; font-size: 24px;}   
+#section #contentBox .text {font-weight: 300;}
+#section #contentBox input {padding: 5px; width: 200px; height: 40px;}
+#section #contentBox .search {margin-top: 20px;}
+#section #contentBox .btnWrap {padding: 30px;}
+#section #contentBox .btnWrap a {padding: 10px 20px; font-size: 20px;}
+
+/* 빠른예약 */
+#section #contentBox .reserve {float: left; width: 33.33%; height: 335px; background: #0984e3;}
+#section #contentBox .reserve .tit {color: #fff;}
+#section #contentBox .reserve .text {color: #fff;}
+#section #contentBox .reserve .btn {padding: 6px 15px 10px 15px; color: #fff; background: #74b9ff;}
+#section #contentBox .reserve .btnWrap a {color: #fff; border: 1px solid #fff;}
+
+/* 진료과 의료진검색 */
+#section #contentBox .docterSearch {float: left; width: 33.33%; height: 335px; background: #eee;}
+#section #contentBox .docterSearch .tit {color: #0984e3;}
+#section #contentBox .docterSearch .btn {padding: 6px 15px 10px 15px; color: #0984e3; background: #fff;}
+#section #contentBox .docterSearch .btnWrap a {color: #0984e3; border: 1px solid #0984e3;}
+
+/* 대표번호 */ 
+#section #contentBox .infoCall {float: left; width: 33.33%; height: 335px; background: #fff;}
+#section #contentBox .infoCall .tit {margin-bottom: 20px;}
+#section #contentBox .infoCall .tit span {color: #0984e3; font-weight: 500;}
+#section #contentBox .infoCall .text {margin-left: 90px; text-align: left;}
+#section #contentBox .infoCall .text span {color: #0984e3; font-weight: 500;}
+#section #contentBox .infoCall .btnWrap {margin-top: 18px;}
+#section #contentBox .infoCall .btnWrap a {color: #0984e3; border: 1px solid #0984e3;}
+
+/* 커뮤니티탭 */
+#section #contentBox .community {float: left; width: 66.66%; height: 335px; background: #fff;}
+#section #contentBox .community .mainTap {margin: 30px 0 0 30px; width: 100%; height: 50px;}
+#section #contentBox .community .mainTap li {float: left; background: url(../images/newslien.jpg) right no-repeat;}
+#section #contentBox .community .mainTap li.lastList {background: url();}
+#section #contentBox .community .mainTap li .tit {color: #999;}
+#section #contentBox .community .mainTap li.active a{color: #0984e3;}
+/* 공지 */
+#section #contentBox .community .newsTap {display: block; position: relative; width: 100%;}
+#section #contentBox .community .newsTap .addBtn {position: absolute; right: 40px; top: -50px;}
+#section #contentBox .community .newsTap li {display: inline-block; padding: 10px; margin-left: 40px; width: 100%;}
+#section #contentBox .community .newsTap li span{padding: 3px; float: left; color: #fff; background: #0984e3; font-size: 13px; font-weight: 300;}
+#section #contentBox .community .newsTap li .text {float: left; margin-left: 10px; font-weight: 500;}
+#section #contentBox .community .newsTap li:hover .text {color: #0984e3;}
+#section #contentBox .community .newsTap li .date {float: right; margin-right: 70px;}
+/* 언론 */
+#section #contentBox .community .mediaTap {display: none; position: relative; width: 100%;}
+#section #contentBox .community .mediaTap .addBtn {position: absolute; right: 40px; top: -50px;}
+#section #contentBox .community .mediaTap li {display: inline-block; padding: 10px; margin-left: 40px; width: 100%;}
+#section #contentBox .community .mediaTap li span{padding: 3px; float: left; color: #fff; background: #00cec9; font-size: 13px; font-weight: 300;}
+#section #contentBox .community .mediaTap li .text {float: left; margin-left: 10px; font-weight: 500;}
+#section #contentBox .community .mediaTap li:hover .text {color: #0984e3;}
+#section #contentBox .community .mediaTap li .date {float: right; margin-right: 70px;}
+/* 채용 */
+#section #contentBox .community .recruitTap {display: none; position: relative; width: 100%;}
+#section #contentBox .community .recruitTap .addBtn {position: absolute; right: 40px; top: -50px;}
+#section #contentBox .community .recruitTap li {display: inline-block; padding: 10px; margin-left: 40px; width: 100%;}
+#section #contentBox .community .recruitTap li span{padding: 3px; float: left; color: #fff; background: #ff7675; font-size: 13px; font-weight: 300;}
+#section #contentBox .community .recruitTap li .text {float: left; margin-left: 10px; font-weight: 500;}
+#section #contentBox .community .recruitTap li:hover .text {color: #0984e3;}
+#section #contentBox .community .recruitTap li .date {float: right; margin-right: 70px;}
+
+/* 찾아오시는길 */
+#section #contentBox .infoRode {float: left; width: 33.33%; height: 335px; background: #74b9ff;}
+#section #contentBox .infoRode .tit {color: #fff;}
+#section #contentBox .infoRode .text {color: #fff;}
+#section #contentBox .infoRode .btnWrap a {color: #fff; border: 1px solid #fff;}
+
+/* 건강이야기 */
+#section #contentBox2 .tit {position: relative; margin: 130px 0 30px 0; font-size: 40px;}
+#section #contentBox2 .tit::after {content: ''; display: block; position: absolute; left: 80px; top: 50%; border: 0.5px solid #555; width: 380px;}
+#section #contentBox2 .tit::before {content: ''; display: block; position: absolute; right: 80px; top: 50%; border: 0.5px solid #555; width: 380px;}
+#section #contentBox2 .healthWrap {display: inline-block;}
+#section #contentBox2 .healthWrap li {float: left; padding: 20px;}
+#section #contentBox2 .healthWrap li img {transition: all 0.3s ease-in-out;}
+#section #contentBox2 .healthWrap li:hover img {transition: all 0.3s ease-in-out; transform: scale(1.1);}
+#section #contentBox2 .healthWrap li .healthImg {overflow: hidden; width: 230px; height: 230px; border-radius: 100%;}
+#section #contentBox2 .healthWrap li .contWrap {width: 230px;}
+#section #contentBox2 .healthWrap .contWrap .healthTit {padding: 10px;}
+#section #contentBox2 .healthWrap .contWrap .healthTit:hover a {color: #0984e3; font-weight: 500;}
+#section #contentBox2 .healthWrap .contWrap .healthDate {padding: 10px; font-size: 15px;}
+
+/* 푸터 */ 
+#footer {background: #2c4558;}
+#footer .footerWrap {position: relative; margin-top: 60px;}
+#footer .infoHospital {padding-top: 30px; width: 100%; height: 80px;}
+#footer .infoHospital li{float: left;}
+#footer .infoHospital li a {color: #fff; padding: 10px; font-size: 15px; font-weight: 300; background: url(../images/footerlien.jpg) right no-repeat;}
+#footer .infoHospital li.lastList a {background: url();}
+#footer .infoHospital li.deco a {color: #74b9ff;}
+#footer .inofNum {text-align: left; padding: 10px 0 40px 10px;}
+#footer .inofNum p {color: #fff; font-size: 15px; font-weight: 300;}
+#footer .familySite {position: absolute; right: 0; top: 30px; width: 130px; height: 50px; background: #0984e3;}
+#footer .familySite a {color: #fff; line-height: 50px;}
+#footer .logo {position: absolute; right: 0; top: 100px;}
+#footer .logo img {padding-top: 20px; width: 130px;}
+
+#footer #copyright {width: 100%; background: #1b3442; text-align: center;}
+#footer #copyright img {padding: 15px; width: 10%;}

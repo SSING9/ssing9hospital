@@ -152,4 +152,5 @@ font-family: 'Noto Sans KR', sans-serif;
 #footer .logo img {padding-top: 20px; width: 130px;}
 
 #footer #copyright {width: 100%; background: #3a3a3a; text-align: center;}
-#footer #copyright img {padding: 15px; width: 10%;}
+#footer #copyright .w3c {padding: 20px;}
+#footer #copyright .footerlogo {padding: 15px;}

@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 /* 초기화 */
-
 * {margin: 0; padding: 0; box-sizing: border-box;}
 li {list-style: none;}
 a {text-decoration: none;}
@@ -35,7 +34,7 @@ font-family: 'Noto Sans KR', sans-serif;
 #heder #mainWrap #mainNav {display: block; float: right; width: 880px;}
 #heder #mainWrap #mainNav li {position: relative; float: left; margin-top: 60px; width: 20%;}
 #heder #mainWrap #mainNav li a {padding-bottom: 5px; font-size: 22px;}
-#heder #mainWrap #mainNav li:hover > a {border-bottom: 3px solid #0984e3; transition: all 0.2s;}
+#heder #mainWrap #mainNav li:hover > a {border-bottom: 3px solid #0984e3; transition: all .3s;}
 #heder #mainWrap #mainNav li .mainSubNav {display: none; position: absolute; left: 0; top: 59px; z-index: 5; background: #fff; 
                                           border-left: 2px solid #0984e3; border-right: 2px solid #0984e3; border-bottom: 2px solid #0984e3;}
 #heder #mainWrap #mainNav li .mainSubNav li {margin: 0; padding: 10px; width: 100%; }
@@ -150,5 +149,7 @@ font-family: 'Noto Sans KR', sans-serif;
 #footer .familySite a {color: #fff; line-height: 50px;}
 #footer .logo {position: absolute; right: 0; top: 100px;}
 #footer .logo img {padding-top: 20px; width: 130px;}
+
+/* 포트폴리오 바로가기 */
 #footer #copyright {width: 100%; background: #3a3a3a; text-align: center;}
 #footer #copyright .footerlogo {padding: 15px;}
